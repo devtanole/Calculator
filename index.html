@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="styles.css" rel="stylesheet" />
+    <title>Odin Calculator</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="screen">
+        <div class="screen-last" id="last"></div>
+        <div class="screen-current" id="current">0</div>
+      </div>
+      <div class="buttons">
+        <!-- Top row: Clear, Delete -->
+        <button class="btn function" data-action="clear">C</button>
+        <button class="btn function" data-action="delete">DEL</button>
+        <button class="btn operator" data-operation="/">÷</button>
+
+        <!-- Row: 7 8 9 × -->
+        <button class="btn number" data-number="7">7</button>
+        <button class="btn number" data-number="8">8</button>
+        <button class="btn number" data-number="9">9</button>
+        <button class="btn operator" data-operation="*">×</button>
+
+        <!-- Row: 4 5 6 − -->
+        <button class="btn number" data-number="4">4</button>
+        <button class="btn number" data-number="5">5</button>
+        <button class="btn number" data-number="6">6</button>
+        <button class="btn operator" data-operation="-">−</button>
+
+        <!-- Row: 1 2 3 + -->
+        <button class="btn number" data-number="1">1</button>
+        <button class="btn number" data-number="2">2</button>
+        <button class="btn number" data-number="3">3</button>
+        <button class="btn operator" data-operation="+">+</button>
+
+        <!-- Row: 0 . = -->
+        <button class="btn number zero" data-number="0">0</button>
+        <button class="btn decimal" data-decimal=".">.</button>
+        <button class="btn equals" data-action="equals">=</button>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
