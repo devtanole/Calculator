@@ -1,0 +1,92 @@
+/* Basic reset & layout */
+body {
+  font-family: sans-serif;
+  background: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+h1 {
+  padding: 1rem;
+}
+
+.container {
+  background: #222;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  width: 320px;
+}
+
+/* Display area */
+.screen {
+  background: #000;
+  color: #0f0;
+  font-size: 2rem;
+  padding: 1rem;
+  border-radius: 5px;
+  text-align: right;
+  margin-bottom: 1rem;
+  min-height: 60px;
+}
+
+.screen-last {
+  font-size: 1rem;
+  color: #999;
+}
+
+.screen-current {
+  font-size: 2rem;
+}
+
+/* Grid layout */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+/* Button styles */
+.btn {
+  padding: 20px;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 5px;
+  background: #333;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn:hover {
+  background: #444;
+}
+
+/* Specific button types */
+.operator {
+  background: #fe9241;
+}
+
+.operator:hover {
+  background: #ec7d23;
+}
+
+.function {
+  background: #555;
+}
+
+.equals {
+  background: #1e90ff;
+  grid-column: span 1;
+}
+
+.decimal {
+  background: #666;
+}
+
+.zero {
+  grid-column: span 3;
+}
