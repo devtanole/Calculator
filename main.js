@@ -1,3 +1,17 @@
+let firstOperand = "";
+let secondOperand = "";
+let currentOperation = null;
+let shouldResetScreen = false;
+
+const $numberButtons = document.querySelectorAll("[data-number]");
+const $operationButtons = document.querySelectorAll("[data-operation]");
+const $clearButton = document.querySelector(".clear-btn");
+const $deleteButton = document.querySelector(".delete-btn");
+const $equalButton = document.querySelector(".equals");
+const $decimalButton = document.querySelector(".decimal");
+const $screenCurrent = document.querySelector(".screen-current");
+const $screenLast = document.querySelector(".screen-last");
+
 function add(a, b) {
   return a + b;
 }
