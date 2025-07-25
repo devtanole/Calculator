@@ -1,6 +1,6 @@
 /* Basic reset & layout */
 body {
-  font-family: sans-serif;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   background: #f2f2f2;
   display: flex;
   justify-content: center;
@@ -14,7 +14,7 @@ h1 {
 }
 
 .container {
-  background: #222;
+  background: rgb(0, 0, 0);
   padding: 1rem;
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
@@ -23,8 +23,8 @@ h1 {
 
 /* Display area */
 .screen {
-  background: #000;
-  color: #0f0;
+  background: #ffd0d0;
+  color: rgb(93, 10, 69);
   font-size: 2rem;
   padding: 1rem;
   border-radius: 5px;
@@ -35,7 +35,7 @@ h1 {
 
 .screen-last {
   font-size: 1rem;
-  color: #999;
+  color: #ffd0d0;
 }
 
 .screen-current {
@@ -55,36 +55,39 @@ h1 {
   font-size: 1.5rem;
   border: none;
   border-radius: 5px;
-  background: #333;
+  background: #ffd0d0;
   color: white;
   cursor: pointer;
   transition: background 0.2s ease;
 }
 
 .btn:hover {
-  background: #444;
+  background: #b0b0b0;
 }
 
 /* Specific button types */
 .operator {
-  background: #fe9241;
+  background: #dab5e4;
 }
 
 .operator:hover {
-  background: #ec7d23;
+  background: #4eafeb;
 }
 
 .function {
-  background: #555;
+  background: rgb(232, 231, 231);
+  color: black;
 }
 
 .equals {
-  background: #1e90ff;
+  background: #e34d4d;
   grid-column: span 1;
+  color: black;
 }
 
 .decimal {
-  background: #666;
+  background: rgb(232, 231, 231);
+  color: black;
 }
 
 .zero {
