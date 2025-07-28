@@ -12,12 +12,17 @@ const $decimalButton = document.querySelector(".decimal");
 const $screenCurrent = document.querySelector(".screen-current");
 const $screenLast = document.querySelector(".screen-last");
 
+$deleteButton.addEventListener("click", deleteNumber);
+$clearButton.addEventListener("click", clear);
+$equalButton.addEventListener("click", calculate);
+$decimalButton.addEventListener("click", appendDecimal);
+
 $numberButtons.forEach((btn) => {
   btn.addEventListener("click", () => appendNumber(btn.textContent));
 });
 
 $operationButtons.forEach((btn) => {
-  btn.addEventListener("click", () => setOperator(btn.textContent));
+  btn.addEventListener("click", () => setOperator(btn.dataset.operation));
 });
 
 function appendNumber(number) {
@@ -31,6 +36,33 @@ function appendNumber(number) {
   } else {
     secondOperand = $screenCurrent.textContent;
   }
+}
+
+function appendDecimal() {
+  if (shouldResetScreen) {
+    $screenCurrent.textContent = "";
+    shouldResetScreen = false;
+  }
+  if ($screenCurrent.textContent === "") {
+    $screenCurrent.textContent = "0";
+  }
+  if ($screenCurrent.textContent.includes(".")) return;
+  $screenCurrent.textContent += ".";
+}
+
+function deleteNumber() {
+  $screenCurrent.textContent = $screenCurrent.textContent
+    .toString()
+    .slice(0, -1);
+}
+
+function clear() {
+  $screenCurrent.textContent = 0;
+  $screenLast.textContent = "";
+  firstOperand = "";
+  secondOperand = "";
+  currentOperation = null;
+  shouldResetScreen = false;
 }
 
 function setOperator(operator) {
@@ -97,9 +129,9 @@ function operate(operator, a, b) {
       return add(a, b);
     case "-":
       return subtract(a, b);
-    case "×":
+    case "*":
       return multiply(a, b);
-    case "÷":
+    case "/":
       if (b === 0) return null;
       else return divide(a, b);
     default:
