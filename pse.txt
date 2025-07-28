@@ -1,0 +1,33 @@
+ func when number button is clicked:
+  -if screen is 0 or reset flag is true
+    -replace screen with clicked number
+  -else
+    -append number to current input
+
+When operator is clicked:
+// - If an operation already exists and screen is not reset
+//     - Perform previous calculation
+// - Store current input as previous value
+// - Store selected operator
+// - Set flag to reset screen on next input
+
+// When equals is clicked:
+// - If operation exists
+//     - Perform calculation using previous value and current input
+//     - Display result
+//     - Clear stored operation
+
+// When decimal is clicked:
+// - If current input already has a decimal, do nothing
+// - Else append decimal
+
+// When delete is clicked:
+// - Remove last character from current input
+// - If input is empty, set to "0"
+
+// When clear is clicked:
+// - Reset current input, previous input, operation, and flags
+
+// Update display function:
+// - Set screen value based on current input
+// - Optionally show previous input + operation somewhere

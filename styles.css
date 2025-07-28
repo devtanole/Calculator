@@ -1,0 +1,101 @@
+/* Basic reset & layout */
+body {
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+  background: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+h1 {
+  padding: 1rem;
+}
+
+.container {
+  background: rgb(255, 255, 255);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  width: 320px;
+}
+
+/* Display area */
+.screen {
+  background: #ffd0d0;
+  color: rgb(93, 10, 69);
+  font-size: 2rem;
+  padding: 1rem;
+  border-radius: 5px;
+  text-align: right;
+  margin-bottom: 1rem;
+  min-height: 60px;
+}
+
+.screen-last {
+  font-size: 1rem;
+  color: rgb(93, 10, 69);
+}
+
+.screen-current {
+  font-size: 2rem;
+}
+
+/* Grid layout */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+/* Button styles */
+.btn {
+  padding: 20px;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 5px;
+  background: #ffd0d0;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn:hover {
+  background: #b0b0b0;
+}
+
+/* Specific button types */
+.operator {
+  background: #dab5e4;
+}
+
+.operator:hover {
+  background: #ed7fc7;
+}
+
+.function {
+  background: rgb(232, 231, 231);
+  color: black;
+}
+
+.equals {
+  background: #f0ea44;
+  grid-column: span 1;
+  color: black;
+}
+
+.decimal {
+  background: rgb(232, 231, 231);
+  color: black;
+}
+
+.zero {
+  grid-column: span 3;
+}
+
+.bow {
+  position: relative;
+  bottom: 267px;
+  left: 445px;
+}
